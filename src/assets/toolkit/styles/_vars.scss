@@ -1,143 +1,67 @@
-/**
- * -----------------------------------------------------------------------------
- * $VARS
- * -----------------------------------------------------------------------------
- */
+/*///////////////
+/// VARS
+*/ //////////////
 
-/**
- * SPACING
- */
+/* SPACING UNITS */
 
-$base-unit: 1.2rem;
+$spacing-default: 16px;
 
-$spacing-tiny: $base-unit/4;
-$spacing-small: $base-unit/2;
-$spacing-default: $base-unit;
-$spacing-large: $base-unit * 2;
-$spacing-huge: $base-unit * 4;
+$spacing-tiny: $spacing-default/4;
+$spacing-small: $spacing-default/2;
+$spacing-large: $spacing-default * 2;
+$spacing-huge: $spacing-default * 4;
 
-/**
- * BORDER
- */
+/* BORDERS */
 
-$border-radius: $base-unit/4;
+$border-radius-default: 3px;
 
-$input-border-width: 1px;
-
-/**
- * BREAKPOINTS
- */
+/* BREAKPOINTS */
 
 $bp-mobile-small: 320px;
 $bp-mobile: 375px;
-$bp-mobile-large: 425px;
-$bp-tablet-small: 600px;
+$bp-mobile-large: 440px;
 $bp-tablet: 768px;
-$bp-desktop: 1024px;
-$bp-desktop-medium: 1440px;
-$bp-desktop-large: 1920px;
-
 $bp-grid-stack: $bp-tablet;
+$bp-tablet-large: 1024px;
+$bp-desktop: 1400px;
+$bp-desktop-large: 1920px;
+$bp-4k: 2560px;
 
-$bp-logo-large: 87.5em;
+/* COLOURS */
 
-$bp-header-toggle: 52em;
+$color-white: #ffffff;
+$color-grey-lightest: #dddddd;
+$color-grey-light: #595959;
+$color-grey: #202c39;
+$color-black: #141213;
 
-/**
- * BUTTONS
- */
+$color-red: #ea2027;
+$color-red-dark: darken($color-red, 5%);
 
-$btn-tab-width: 140px;
+$color-pink: #ed4c67;
+$color-blue: #0652dd;
+$color-dark-blue: #1b1464;
 
-/**
- * COLOURS
- */
+$color-primary: $color-red;
+$color-secondary: $color-blue;
+$color-tertiary: $color-dark-blue;
+$color-quaternary: $color-pink;
 
-$color-primary: #071931;
-$color-secondary: #0E2F49;
-$color-tertiary:  #FF6933;
-$color-quaternary: #E94D35;
+/* FONT VARIABLES */
 
-$color-black: #121212;
-$color-grey-matte: #2C343A;
-$color-grey: #595959;
-$color-grey-light: #B3B3B3;
-$color-grey-lightest: #DFE6E9;
-$color-white: #FFFFFF;
-
-$color-blue: #00CEC9;
-$color-green: #55EFC4;
-$color-purple: #5F27CD;
-$color-red: #D63031;
-$color-yellow: #ffa801;
-
-$color-label-default: $color-grey;
-
-$color-text-title: $color-white;
-
-$color-facebook: #3b5998;
-$color-googleplus: #dc4e41;
-$color-instagram: #e4405f;
-$color-twitter: #1da1f2;
-$color-youtube: #cd201f;
-
-/**
- * FONT
- */
-
-$font-family-default: "Roboto", sans-serif;
-$font-family-heading: "Knewave", sans-serif;
-
-$font-weight-bold: 700;
+$font-family-heading: "Roboto", Arial, sans-serif;
 $font-weight-default: 400;
+$font-weight-bold: 700;
 
-$font-size-heading: 3.6rem;
-$font-size-heading-mobile: 2.8rem;
-
-$font-size-heading-2: 2.8rem;
-$font-size-heading-2-mobile: 2.4rem;
-
-$font-size-heading-3: 2.4rem;
-$font-size-heading-3-mobile: 2rem;
-
-$font-size-hero: 6rem;
-$font-size-large: 1.9rem;
-$font-size-default: 1.6rem;
-$font-size-small: 1.4rem;
-
-$font-size-default-em: 1.6em;
-
-$letter-spacing-loose: 1px;
-
-$line-height-default: 1.4;
-
-/**
- * GRID
- */
+/* GRID VARIABLES */
 
 $grid-gap-default: $spacing-large;
 $grid-gap-large: $spacing-large * 1.5;
 $grid-gap-huge: $spacing-huge * 1.5;
 
-/**
- * TRANSITION
- */
+/* SIZE UNITS */
 
-$transition-duration-default: 0.4s;
-
-/**
- * WIDTH
- */
+$heading-height: 100px;
+$mobile-height: 110px;
 
 $width-content: 900px;
-$width-content-large: 1560px;
-$width-header-content: 1330px;
-
-/**
- * Z-INDEX
- */
-
-$z-index-front: 100;
-$z-index-default: 1;
-$z-index-under: -1;
-$z-index-back: -100;

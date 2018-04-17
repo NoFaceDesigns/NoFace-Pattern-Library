@@ -1,0 +1,52 @@
+/*///////////////
+/// HEADINGS
+*///////////////
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.45;
+    margin-top: 0;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+$heading-scale: 1.45;
+$heading-5: 1.5rem;
+$heading-4: 2rem;
+$heading-3: $heading-4 * $heading-scale;
+$heading-2: $heading-3 * $heading-scale;
+$heading-1: $heading-2 * $heading-scale;
+
+h1, .title--h1 {
+    font-size: $heading-2;
+}
+
+h2, .title--h2 {
+    font-size: $heading-3;
+}
+
+h3, .title--h3 {
+    font-size: $heading-4;
+}
+
+h4, .title--h4 {
+    font-size: $heading-5;
+}
+
+@include bp-min-width($bp-tablet) {
+    h1, .title--h1 {
+        font-size: $heading-1;
+    }
+
+    h2, .title--h2 {
+        font-size: $heading-2;
+    }
+
+    h3, .title--h3 {
+        font-size: $heading-3;
+    }
+
+    h4, .title--h4 {
+        font-size: $heading-4;
+    }
+}

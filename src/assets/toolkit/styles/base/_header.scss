@@ -1,294 +1,87 @@
-/**
- * -----------------------------------------------------------------------------
- * $HEADER
- * -----------------------------------------------------------------------------
- */
+/*///////////////
+/// HEADER
+*///////////////
 
 header {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
 
-	background-color: $color-primary;
+    width: 100%;
+    padding: $spacing-default;
 
-	a {
-		padding: $spacing-small;
+    font-weight: 700;
 
-		color: $color-white;
-		text-decoration: none;
+    li {
+        display: inline-block;
+        letter-spacing: 0.2px;
+    }
 
-		@include active-states() {
-			color: darken($color-white, 20%);
-		}
-	}
+    a {
+        color: $color-white;
+    }
 
-	button {
-		align-items: center;
-		display: flex;
-		justify-content: center;
-		margin-top: 0;
+    nav {
+        width: 100%;
+        max-width: 275px;
 
-		svg {
-			margin-right: $spacing-tiny;
-		}
-	}
+        @include bp-min-width($bp-tablet) {
+            max-width: 380px;
+        }
+    }
 
-	li {
-		display: inline-block;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-		& ~ li {
-			margin-left: $spacing-tiny;
-		}
-	}
+    .logo {
+        min-width: 50px;
+        width: 50px;
+        position: relative;
 
-	ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
+        &__path {
+            animation-name: draw;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-timing-function: ease;
+            animation-iteration-count: 1; // Run only once
 
-		@include bp-min-width($bp-desktop-medium) {
-			margin-left: $spacing-default;
-		}
-	}
+            stroke-linecap: round;
+            stroke-miterlimit: 10;
+            fill: none;
+            stroke: $color-white;
+            stroke-width: 10;
+            stroke-dasharray: 142.47500610351562px;
+            stroke-dashoffset: 142.47500610351562px;
+            animation-fill-mode: forwards; // Stay on the last frame
+        }
 
-	.header__burger {
-		@include bp-min-width($bp-desktop-medium) {
-			display: none;
-		}
-	}
+    }
 
-	nav {
-		align-items: flex-start;
-		display: flex;
-		flex-direction: column;
-		height: 100%;
-		left: -200px;
-		padding: $spacing-default;
-		position: absolute;
-		top: 0;
-		width: 200px;
+    @keyframes draw {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
 
-		background-color: lighten($color-primary, 5%);
-		transition: 0.15s left ease;
+    .menu-item-home,
+    .menu-item-103 {
+        display: none;
 
-		@include bp-min-width($bp-desktop-medium) {
-			font-size: 0.85rem;
-		}
+        @include bp-min-width($bp-tablet) {
+            display: inline-block;
+        }
+    }
 
-		@include bp-min-width($bp-desktop-medium) {
-			align-items: center;
-			flex-direction: row;
-			height: auto;
-			padding: 0;
-			position: relative;
-			left: 0;
-			min-width: 500px;
-
-			background-color: transparent;
-			font-size: 1rem;
-		}
-
-		@include bp-min-width($bp-desktop-medium) {
-			min-width: 620px;
-		}
-
-		li {
-			display: block;
-			margin-left: 0;
-			width: 100%;
-
-			@include bp-min-width($bp-desktop-medium) {
-				display: inline-block;
-				width: auto;
-			}
-
-			a {
-				display: block;
-			}
-		}
-	}
-}
-
-.header__avatar {
-	align-items: center;
-	display: flex;
-	justify-content: center;
-	margin-left: $spacing-default;
-	max-width: $spacing-large * 1.5;
-	position: relative;
-
-	cursor: pointer;
-
-	img {
-		background-color: $color-white;
-		border-radius: 50%;
-	}
-}
-
-.header__avatar,
-.header__login {
-	@include bp-max-width($bp-desktop) {
-		margin-left: auto;
-	}
-}
-
-.header__actions {
-	border-radius: $border-radius;
-	display: block;
-	margin-left: 0;
-	padding: $spacing-small 0;
-	position: absolute;
-	right: 0;
-	top: calc(100% + #{$spacing-default});
-	z-index: $z-index-front;
-
-	background: $color-white;
-	transition: 0.2s opacity ease;
-
-	li {
-		min-width: 200px;
-
-		~ li {
-			margin-left: 0;
-		}
-	}
-
-	a {
-		color: $color-black;
-		display: block;
-		padding: $spacing-tiny $spacing-default;
-
-		transition: 0.2s all ease;
-
-		@include active-states() {
-			color: $color-white;
-			background-color: $color-purple;
-		}
-	}
-}
-
-.header__results {
-	display: block;
-	position: absolute;
-	right: 0;
-	top: calc(100% + #{$spacing-small});
-	width: 100%;
-	z-index: $z-index-front;
-
-	background-color: $color-white;
-
-	a {
-		display: block;
-		padding: $spacing-small;
-
-		color: $color-black;
-		transition: 0.2s all ease;
-
-		@include active-states() {
-			color: $color-white;
-			background-color: $color-purple;
-		}
-	}
-
-	li {
-		display: block;
-		margin-left: 0;
-
-		~ li {
-			margin-left: 0;
-		}
-	}
-}
-
-.header__search {
-	align-items: center;
-	border-radius: $border-radius;
-	display: none;
-	justify-content: flex-start;
-	margin: 0 $spacing-small 0 auto;
-	max-width: 300px;
-	position: relative;
-	width: 100%;
-
-	background-color: hsl(194, 23%, 92%);
-
-	label {
-		margin: 0;
-		padding: $spacing-tiny $spacing-small;
-	}
-
-	input {
-		padding: $spacing-tiny;
-		padding-right: $spacing-small;
-		width: 100%;
-
-		background: none;
-		border: none;
-		outline: none;
-
-		&::placeholder {
-			opacity: 0.4;
-		}
-	}
-
-	@include bp-min-width($bp-desktop) {
-		display: flex;
-	}
-
-	@include bp-min-width($bp-desktop-medium) {
-		justify-content: center;
-		padding: $spacing-tiny;
-	}
-}
-
-.logo {
-	margin-bottom: $spacing-small;
-	max-width: 185px;
-	width: 100%;
-
-	a {
-		padding: 0;
-	}
-
-	@include bp-min-width($bp-desktop) {
-		margin-bottom: 0;
-		max-width: 115px;
-	}
-
-	@include bp-min-width($bp-desktop-medium) {
-		max-width: 185px;
-	}
-}
-
-.header__content {
-	align-items: center;
-	display: flex;
-	flex-direction: row;
-	padding: $spacing-default;
-	width: 100%;
-}
-
-.header__profile {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	justify-content: center;
-	max-width: 40%;
-	width: 200px;
-
-	background-color: $color-white;
-	color: $color-black;
-
-	a {
-		padding: 0;
-
-		color: $color-black;
-	}
-
-	img {
-		max-width: $spacing-large;
-
-		border-radius: 50%;
-	}
+    @include bp-min-width($bp-tablet) {
+        padding: $spacing-default $spacing-large;
+        flex-direction: row;
+    }
 }

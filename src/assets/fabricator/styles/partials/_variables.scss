@@ -21,8 +21,7 @@ $theme: $theme-light;
 
 $colors: map-merge($base-colors, $theme);
 
-$menu-width: 14rem;
-
+$menu-width: 20rem;
 
 // mixins
 @mixin clearfix {
@@ -33,7 +32,7 @@ $menu-width: 14rem;
 	&:before,
 	&:after {
 		display: table;
-		content: ' ';
+		content: " ";
 	}
 }
 

@@ -1,84 +1,31 @@
-/**
- * -----------------------------------------------------------------------------
- * $ARTICLE
- * -----------------------------------------------------------------------------
- */
+/*///////////////
+/// ARTICLE
+*///////////////
 
 article {
-    padding: $spacing-small;
+    padding: $spacing-large $spacing-default;
 
     /* Advanced vertical rhythym based off of https://medium.com/@sebastian.eberlein/advanced-vertical-margins-4ac69f032f79 */
-    > * + * { margin-top: 1.5rem }
-    > h2 + * { margin-top: 1rem }
-    > img + *, > figure + * { margin-top: 3rem }
-    > * + h2 { margin-top: 4.5rem }
-    > * + h3 { margin-top: 3.5rem }
-    > * + img { margin-top: 3rem }
-    > img + img, > figure + figure { margin-top: 1rem }
-    > h2 + h3 { margin-top: 2rem }
 
-    & > * {
-        margin-left: auto;
+    > * + * { margin-top: 1.5rem; }
+    > h2 + * { margin-top: 1rem; }
+    > img + *, > figure + * { margin-top: 3rem; }
+    > * + h2 { margin-top: 4.5rem; }
+    > * + h3 { margin-top: 3.5rem; }
+    > * + img { margin-top: 3rem; }
+    > * + h4 { margin-top: 2.5rem; }
+    > img + img, > figure + figure { margin-top: 1rem; }
+    > h2 + h3 { margin-top: 2rem; }
+    > h3 + h4 { margin-top: 2rem; }
+
+
+    & > *:not(img):not(figure):not(.ignore) {
+        max-width: $width-content;
         margin-right: auto;
+        margin-left: auto;
     }
 
-    & > *:not(img):not(figure):not(.ignore):not(.article__thumbnail) {
-        max-width: 800px;
-    }
-
-    & > img,
-    & > figure,
-    & .ignore {
-        display: block;
-        width: 1200px;
-    }
-
-    & .article__thumbnail {
-        width: 100%;
-    }
-
-    @include bp-min-width($bp-mobile-large) {
-        padding: $spacing-large;
-    }
-
-    &.has-post-thumbnail {
-        padding: 0;
-        padding-bottom: $spacing-small;
-
-        @include bp-min-width($bp-mobile-large) {
-            padding-bottom: $spacing-large;
-        }
+    @include bp-min-width($bp-desktop) {
+        padding: $spacing-huge $spacing-large;
     }
 }
-
-    .article__thumbnail {
-        height: 200px;
-        max-width: 100%;
-
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-
-        @include bp-min-width($bp-mobile-large) {
-            height::300px;
-        }
-    }
-
-    .article__meta {
-        padding: $spacing-small 0;
-
-        color: $color-black;
-        font-family: $font-family-heading;
-        font-weight: $font-weight-default;
-        list-style: none;
-        text-transform: uppercase;
-
-        a {
-            color: $color-black;
-            text-decoration: none;
-
-            @include active-states {
-                color: $color-purple;
-            }
-        }
-    }

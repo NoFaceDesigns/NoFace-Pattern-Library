@@ -1,27 +1,18 @@
-/**
- * -----------------------------------------------------------------------------
- * $ANCHOR
- * -----------------------------------------------------------------------------
- */
+/*///////////////
+/// ANCHOR
+*/ //////////////
 
 a,
 .link {
-	color: $color-purple;
-	text-decoration: none;
-
-	transition: 0.2s color ease;
+	color: $color-blue;
+	line-height: 1.45;
 
 	@include active-states() {
-		color: lighten($color-purple, 20%);
+		text-decoration: none;
 	}
 }
 
-.link--blend {
+.link--inherit {
 	color: inherit;
-}
-
-article {
-	a {
-		text-decoration: underline;
-	}
+	text-decoration: none;
 }

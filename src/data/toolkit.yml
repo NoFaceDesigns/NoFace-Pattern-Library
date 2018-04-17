@@ -6,13 +6,8 @@ colors:
     Grey Light: "#EDEDED"
     White: "#FFFFFF"
   secondary:
-    Primary: "#071931"
-    Secondary: "#0E2F49"
-    Tertiary: "#FF6933"
-    Quaternary: "#E94D35"
-  tertiary:
-    Blue: "#00CEC9"
-    green: "#55EFC4"
-    Purple: "#5F27CD"
-    Red: "#D63031"
-    Yellow: "#FFA801"
+    Primary: "#EA2027"
+    Secondary: "#0652DD"
+    Tertiary: "#1B1464"
+    Quaternary: "#ED4C67"
+

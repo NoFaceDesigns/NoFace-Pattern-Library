@@ -1,29 +1,87 @@
-/**
- * -----------------------------------------------------------------------------
- * $FORM
- * -----------------------------------------------------------------------------
- */
+/*///////////////
+/// FORM
+*/ //////////////
+
+form {
+	input,
+	textarea {
+		padding: $spacing-tiny;
+	}
+}
+
+input {
+	max-width: 100%;
+}
+
+label {
+	font-weight: 700;
+}
+
+textarea {
+	max-width: 100%;
+	resize: vertical;
+}
+
+#simple-contact-form fieldset {
+	width: 100%;
+	padding: 0;
+	border: 0px solid #000;
+	margin: 0 0 $spacing-default;
+	display: block;
+	min-width: 0;
+	max-width: 100%;
+	width: 100%;
+	text-overflow: clip;
+}
+
+#simple-contact-form fieldset input {
+	width: 100%;
+}
+
+#simple-contact-form fieldset label {
+	margin: 0 0 $spacing-small;
+	display: block;
+}
+
+#simple-contact-form fieldset textarea {
+	width: 100%;
+	margin-top: 2px;
+}
+
+#scf_success pre {
+	white-space: pre-wrap;
+}
+
+p.scf_error,
+p.scf_spam {
+	color: #cc0000;
+}
+
+div.scf-submit {
+	margin-top: 10px;
+}
+
+p.scf_success {
+	color: #669966;
+}
 
 fieldset {
 	padding: $spacing-default;
 	border-color: $color-grey-lightest;
-    border-style: solid;
+	border-style: solid;
 }
 
 form {
 	margin-top: $spacing-large;
-
 	color: $color-black;
 }
 
 label {
 	display: block;
 	margin-bottom: $spacing-small;
-
 	color: rgba($color-black, 0.7);
-	font-size: 0.8rem;
+	font-size: 1.6rem;
 	text-transform: uppercase;
-
 	& ~ label {
 		margin-top: $spacing-default;
 	}
@@ -34,12 +92,11 @@ input[type="number"],
 input[type="password"],
 input[type="text"],
 select {
-	border-radius: $border-radius;
+	border-radius: $border-radius-default;
 	display: block;
 	min-height: 44px;
 	padding: $spacing-small $spacing-default;
 	width: 100%;
-
 	background: $color-white;
 	border: 1px solid $color-grey-light;
 	color: $color-grey;
@@ -48,16 +105,15 @@ select {
 
 input[readonly] {
 	background-color: $color-grey-lightest;
-    cursor: not-allowed;
+	cursor: not-allowed;
 }
 
 textarea {
-	border-radius: $border-radius;
+	border-radius: $border-radius-default;
 	display: block;
 	min-height: 200px;
 	padding: $spacing-small $spacing-default;
 	width: 100%;
-
 	background: $color-white;
 	border: 1px solid $color-grey-light;
 	color: $color-grey;
@@ -67,38 +123,33 @@ textarea {
 
 input[type="checkbox"] {
 	display: none;
-
 	@include active-states() {
 		& + label {
 			&:before {
-				background-color: rgba($color-purple, 0.2);
+				background-color: rgba($color-blue, 0.2);
 			}
 		}
 	}
-
 	& + label {
 		margin-top: 0;
-		padding-left: $spacing-default + $spacing-tiny;
+		padding-left: $spacing-large;
 		position: relative;
 
 		border: 2px solid transparent;
 		cursor: pointer;
 		transition: 0.1s all ease;
-
 		&:before {
 			content: "";
 			display: inline-block;
-			height: $spacing-default;
+			height: $spacing-default * 1.5;
 			left: 0;
 			position: absolute;
 			top: 0;
-			width: $spacing-default;
-
-			border: 1px solid $color-purple;
+			width: $spacing-default * 1.5;
+			border: 1px solid $color-blue;
 			transition: background-color 0.2s ease;
 		}
 	}
-
 	&:checked {
 		& + label {
 			&:before {
@@ -106,8 +157,7 @@ input[type="checkbox"] {
 				content: "\f00c";
 				display: flex;
 				justify-content: center;
-
-				background-color: $color-purple;
+				background-color: $color-blue;
 				color: $color-white;
 				font-family: FontAwesome;
 			}
@@ -117,22 +167,19 @@ input[type="checkbox"] {
 
 input[type="radio"] {
 	display: none;
-
 	& + label {
 		display: inline-block;
 		margin-top: 0;
 		padding: $spacing-tiny $spacing-small;
 		position: relative;
-
 		border: 2px solid transparent;
 		cursor: pointer;
 		transition: 0.1s all ease;
 	}
-
 	&:checked {
 		& + label {
-			background-color: $color-purple;
-			border-color: $color-purple;
+			background-color: $color-blue;
+			border-color: $color-blue;
 			color: $color-white;
 			font-weight: $font-weight-bold;
 		}

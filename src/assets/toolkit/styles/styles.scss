@@ -1,53 +1,72 @@
-@import "fonts";
-@import "vars";
+/*
+Theme Name: NoFace Theme
+Theme URI: http://www.whatjackhasmade.co.uk/
+Author: Jack Davies
+Author URI: http://www.whatjackhasmade.co.uk/
+Description: Did someone say custom wordpress components?
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-@import "mixins/active-states";
-@import "mixins/clearfix";
-@import "mixins/media-queries";
-@import "mixins/list";
-@import "mixins/rem";
-@import "mixins/string";
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
 
-@import "normalize";
+/*///////////////
+/// MAIN
+*/ //////////////
 
-@import "generic/box-sizing";
+@import "mixins/active-states.scss";
+@import "mixins/clearfix.scss";
+@import "mixins/media-queries.scss";
+@import "mixins/rem.scss";
 
-@import "base/anchor";
-@import "base/article";
-@import "base/body";
-@import "base/button";
-@import "base/footer";
-@import "base/form";
-@import "base/header";
-@import "base/heading";
-@import "base/image";
-@import "base/list";
-@import "base/main";
-@import "base/nav";
-@import "base/table";
-@import "base/video";
+@import "reset/box-sizing.scss";
+@import "reset/normalize.scss";
 
-@import "component/breadcrumb";
-@import "component/card";
-@import "component/comment";
-@import "component/gallery";
-@import "component/grid";
-@import "component/loader";
-@import "component/map";
-@import "component/message";
-@import "component/sidebar";
-@import "component/social";
-@import "component/slider";
-@import "component/vote";
-@import "component/wrapper";
+@import "vars.scss";
 
-@import "trumps/background";
-@import "trumps/border";
-@import "trumps/display";
-@import "trumps/flex";
-@import "trumps/gap";
-@import "trumps/margin";
-@import "trumps/padding";
-@import "trumps/position";
-@import "trumps/text";
-@import "trumps/visibility";
+@import "base/anchor.scss";
+@import "base/article.scss";
+@import "base/body.scss";
+@import "base/button.scss";
+@import "base/code.scss";
+@import "base/footer.scss";
+@import "base/form.scss";
+@import "base/header.scss";
+@import "base/headings.scss";
+@import "base/hr.scss";
+@import "base/html.scss";
+@import "base/image.scss";
+@import "base/list.scss";
+@import "base/nav.scss";
+@import "base/paragraph.scss";
+@import "base/section.scss";
+@import "base/table.scss";
+@import "base/video.scss";
+@import "base/wrapper.scss";
+
+@import "components/case-study.scss";
+@import "components/icon.scss";
+@import "components/logo.scss";
+@import "components/news.scss";
+@import "components/palette.scss";
+@import "components/photography.scss";
+@import "components/related.scss";
+@import "components/team.scss";
+
+@import "layout/grid.scss";
+
+@import "trumps/background.scss";
+@import "trumps/border.scss";
+@import "trumps/column.scss";
+@import "trumps/display.scss";
+@import "trumps/flex.scss";
+@import "trumps/hide.scss";
+@import "trumps/margin.scss";
+@import "trumps/padding.scss";
+@import "trumps/position.scss";
+@import "trumps/size.scss";
+@import "trumps/shadow.scss";
+@import "trumps/text.scss";
+@import "trumps/transform.scss";

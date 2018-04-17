@@ -1,43 +1,59 @@
-/**
- * -----------------------------------------------------------------------------
- * $BACKGROUND
- * -----------------------------------------------------------------------------
- */
+/*///////////////
+/// BACKGROUND
+*/ //////////////
 
-.background {
-	&--primary {
-		background-color: $color-primary;
-	}
-	&--secondary {
-		background-color: $color-secondary;
-	}
-	&--tertiary {
-		background-color: $color-tertiary;
-	}
-	&--quaternary {
-		background-color: $color-quaternary;
-	}
-
+.background-color {
 	&--black {
 		background-color: $color-black;
 	}
-	&--grey-matte {
-		background-color: $color-grey-matte;
+	&--grey {
+		background-color: $color-grey;
 	}
-	&--grey-light {
-		background-color: $color-grey-light;
-	}
-	&--grey-lightest {
-		background-color: $color-grey-lightest;
+	&--white {
+		background-color: $color-white;
 	}
 
-	&--repeat {
-		background-position: center center;
+	&--blue {
+		background-color: $color-blue;
 	}
+	&--dark-blue {
+		background-color: $color-dark-blue;
+	}
+	&--pink {
+		background-color: $color-pink;
+	}
+	&--red {
+		background-color: $color-red;
+	}
+}
 
-	&--cover {
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
+.background--cover {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.background--position {
+	&-left-center {
+		background-position: left center;
 	}
+}
+
+.background-overlay {
+	&--dark {
+		&:before {
+			content: "";
+			display: block;
+			top: 0;
+			left: 0;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background-color: rgba($color-black, 0.8);
+		}
+	}
+}
+
+.background--fixed {
+	background-attachment: fixed;
 }

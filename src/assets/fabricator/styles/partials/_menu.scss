@@ -15,7 +15,6 @@
 
 	.f-menu-active & {
 		transform: translate(0, 0);
-
 	}
 
 	ul {
@@ -41,10 +40,10 @@
 
 	a {
 		display: block;
-		padding: 0.5rem 2rem;
+		padding: 1rem 2rem;
 		color: map-get($colors, menu-text) !important;
 		text-decoration: none;
-		font-size: 0.75rem;
+		font-size: 1rem;
 		line-height: 1;
 
 		&:hover {
@@ -60,7 +59,7 @@
 	.f-menu__heading {
 		padding-left: 1.5rem;
 		font-weight: 700;
-		font-size: .6875rem;
+		font-size: 1rem;
 		text-transform: uppercase;
 
 		&:hover {

@@ -1,0 +1,53 @@
+/*/
+//////////////
+/// ICON
+*///////////////
+
+.icon {}
+
+.icon--small {
+    width: $spacing-large;
+    height: $spacing-large;
+}
+
+.icon--medium {
+    width: $spacing-huge;
+    height: $spacing-huge;
+}
+
+.icon--large {
+    width: $spacing-huge*2;
+    height: $spacing-huge*2;
+}
+
+.svg--wheel {
+    animation-name: move-down;
+    animation-duration: 3.2s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-iteration-count: 20;
+}
+
+@keyframes move-down {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    80% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    90% {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
