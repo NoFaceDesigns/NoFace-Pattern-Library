@@ -40,7 +40,7 @@
 }
 
 .single-case-study {
-	a {
+	a:not(.link--cta) {
 		color: $color-light-blue;
 	}
 }
