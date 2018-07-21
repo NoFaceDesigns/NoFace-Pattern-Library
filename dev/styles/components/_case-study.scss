@@ -40,7 +40,9 @@
 }
 
 .single-case-study {
-	a:not(.link--cta) {
-		color: $color-light-blue;
+	.background-color--black {
+		a:not(.link--cta) {
+			color: $color-light-blue;
+		}
 	}
 }
