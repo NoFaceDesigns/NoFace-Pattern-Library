@@ -42,7 +42,7 @@ $color-pink: #ed4c67;
 $color-blue: #0652dd;
 $color-dark-blue: #1b1464;
 
-$color-primary: $color-red;
+$color-primary: $color-blue;
 $color-secondary: $color-blue;
 $color-tertiary: $color-dark-blue;
 $color-quaternary: $color-pink;
@@ -50,6 +50,8 @@ $color-quaternary: $color-pink;
 /* FONT VARIABLES */
 
 $font-family-heading: "Roboto", Arial, sans-serif;
+$font-family-serif: "Roboto Slab", serif;
+
 $font-weight-default: 400;
 $font-weight-bold: 700;
 

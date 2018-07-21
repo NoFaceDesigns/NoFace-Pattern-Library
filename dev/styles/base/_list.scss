@@ -1,11 +1,15 @@
 /*///////////////
 /// LIST
-*///////////////
-
-ul, ol {
+*/ //////////////
+ul,
+ol {
     margin-top: $spacing-default;
-
-    li {
-        margin-top: $spacing-tiny;
+    main & {
+        li {
+            margin-top: 0;
+            ~li {
+                margin-top: $spacing-small;
+            }
+        }
     }
 }

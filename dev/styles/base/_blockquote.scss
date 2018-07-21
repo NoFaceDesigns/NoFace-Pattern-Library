@@ -1,0 +1,16 @@
+/*///////////////
+/// BLOCKQUOTE
+*/ //////////////
+
+blockquote {
+  border-bottom: 2px solid $color-black;
+  border-top: 2px solid $color-black;
+  margin: $spacing-large auto;
+  padding: $spacing-default $spacing-large;
+
+  font-family: $font-family-serif;
+
+  * {
+    margin: 0;
+  }
+}

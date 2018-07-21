@@ -16,6 +16,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /// MAIN
 */ //////////////
 
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:400,700");
+
 @import "mixins/active-states.scss";
 @import "mixins/clearfix.scss";
 @import "mixins/media-queries.scss";
@@ -28,9 +30,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 @import "base/anchor.scss";
 @import "base/article.scss";
+@import "base/blockquote.scss";
 @import "base/body.scss";
 @import "base/button.scss";
 @import "base/code.scss";
+@import "base/figure.scss";
 @import "base/footer.scss";
 @import "base/form.scss";
 @import "base/header.scss";
@@ -45,8 +49,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "base/table.scss";
 @import "base/video.scss";
 @import "base/wrapper.scss";
+@import "base/youtube.scss";
 
 @import "components/case-study.scss";
+@import "components/comment.scss";
+@import "components/cta.scss";
 @import "components/icon.scss";
 @import "components/logo.scss";
 @import "components/news.scss";

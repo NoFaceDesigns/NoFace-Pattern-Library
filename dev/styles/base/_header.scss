@@ -1,12 +1,12 @@
 /*///////////////
 /// HEADER
-*///////////////
+*/ //////////////
 
 header {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 101;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,7 +62,6 @@ header {
             stroke-dashoffset: 142.47500610351562px;
             animation-fill-mode: forwards; // Stay on the last frame
         }
-
     }
 
     @keyframes draw {
