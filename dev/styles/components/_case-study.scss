@@ -1,0 +1,44 @@
+/*///////////////
+/// CASE STUDY
+*/ //////////////
+
+.case-study {
+	text-align: center;
+
+	a {
+		color: #00bcd4;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-bottom: $spacing-small;
+	}
+
+	p {
+		font-size: 14px;
+		color: $color-grey-light;
+	}
+
+	&__information {
+		padding: $spacing-default;
+	}
+
+	&__thumbnail {
+		img {
+			transform: scale(1);
+			transition: 0.2s transform ease;
+		}
+	}
+
+	@include active-states() {
+		.case-study__thumbnail {
+			img {
+				transform: scale(1.02);
+			}
+		}
+	}
+}
