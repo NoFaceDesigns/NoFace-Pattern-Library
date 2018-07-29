@@ -1,9 +1,13 @@
 // // TARGET ALL CODE EXAMPLES WHICH HAVE BEEN LABELLED AS HTML
-// var code = document.body.querySelector('pre[data-lang="html"] code');
-// if (code) {
-//     code.innerHTML = code.innerHTML.replace(/</g, "&lt;");
-//     code.innerHTML = code.innerHTML.replace(/>/g, "&lt;");
-// }
+var code = document.querySelectorAll(
+	'pre[data-lang="html"] code, pre[data-lang="twig"] code'
+);
+if (code) {
+	code.forEach(function(e) {
+		e.innerHTML = e.innerHTML.replace(/</g, "&lt;");
+		e.innerHTML = e.innerHTML.replace(/>/g, "&lt;");
+	});
+}
 
 var article = document.querySelector("article");
 
