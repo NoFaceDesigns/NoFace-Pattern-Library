@@ -22,26 +22,26 @@ article {
 		margin-top: 32px;
 	}
 	> * + h2 {
-		margin-top: 48px;
+		margin-top: 64px;
 	}
 	> * + h3 {
-		margin-top: 32px;
+		margin-top: 48px;
 	}
 	> * + img {
 		margin-top: 32px;
 	}
 	> * + h4 {
-		margin-top: 32px;
+		margin-top: 48px;
 	}
 	> img + img,
 	> figure + figure {
 		margin-top: 32px;
 	}
 	> h2 + h3 {
-		margin-top: 16px;
+		margin-top: 32px;
 	}
 	> h3 + h4 {
-		margin-top: 16px;
+		margin-top: 32px;
 	}
 	> *:not(figure):not(img):not(picture):not(.ignore) {
 		margin-left: auto;
