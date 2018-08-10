@@ -23,19 +23,6 @@
 		font-size: 16px;
 	}
 
-	.read-more {
-		margin-top: auto;
-		padding-bottom: $spacing-tiny;
-
-		border-bottom: 1px solid rgba($color-primary, 0);
-		text-decoration: none;
-		transition: 0.2s border-bottom ease;
-
-		@include active-states() {
-			border-bottom: 1px solid $color-primary;
-		}
-	}
-
 	p {
 		color: $color-grey-light;
 	}
