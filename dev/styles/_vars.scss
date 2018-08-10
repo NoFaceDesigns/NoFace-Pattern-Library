@@ -16,7 +16,6 @@ $spacing-huge: $spacing-default * 4;
 $border-radius-default: 3px;
 
 /* BREAKPOINTS */
-
 $bp-mobile-small: 320px;
 $bp-mobile: 375px;
 $bp-mobile-large: 440px;
@@ -26,6 +25,10 @@ $bp-tablet-large: 1024px;
 $bp-desktop: 1400px;
 $bp-desktop-large: 1920px;
 $bp-4k: 2560px;
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 992px;
+$bp-xl: 1200px;
 
 /* COLOURS */
 

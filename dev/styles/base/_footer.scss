@@ -1,40 +1,50 @@
 /*///////////////
 /// FOOTER
-*///////////////
+*/ //////////////
 
 footer {
-    padding: $spacing-large;
-    color: $color-white;
-    background-color: darken($color-black, 2.5%);
+	padding: $spacing-large;
+	color: $color-white;
+	background-color: darken($color-black, 2.5%);
 
-    p {
-        margin-bottom: 0;
-    }
+	a {
+		color: rgba($color-white, 0.5);
+		text-decoration: none;
+		transition: 0.2s color ease;
 
-    a {
-        color: $color-white;
-    }
+		@include active-states() {
+			color: rgba($color-white, 1);
+		}
+	}
 
-    h4 {
-        margin-bottom: $spacing-small;
-        margin-top: $spacing-large;
-    }
+	h4 {
+		margin-bottom: $spacing-small;
+		margin-top: $spacing-large;
+	}
 
-    .logo {
-        min-width: 50px;
-        width: 50px;
+	li {
+		line-height: 1.5;
+		margin-top: $spacing-tiny;
+	}
 
-        &__path {
-            stroke-linecap: round;
-            stroke-miterlimit: 10;
-            fill: none;
-            stroke: $color-white;
-            stroke-width: 10;
-        }
+	p {
+		margin-bottom: 0;
+	}
 
-    }
+	.logo {
+		min-width: 50px;
+		width: 50px;
 
-    @include bp-min-width($bp-tablet) {
-        padding-bottom: $spacing-huge;
-    }
+		&__path {
+			stroke-linecap: round;
+			stroke-miterlimit: 10;
+			fill: none;
+			stroke: $color-white;
+			stroke-width: 10;
+		}
+	}
+
+	@include bp-min-width($bp-tablet) {
+		padding-bottom: $spacing-huge;
+	}
 }

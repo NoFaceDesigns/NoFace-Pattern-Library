@@ -3,7 +3,10 @@
 */ //////////////
 
 .case-study {
-	text-align: center;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: $spacing-large;
+	text-align: left;
 
 	h1,
 	h2,
@@ -11,16 +14,30 @@
 	h4,
 	h5,
 	h6 {
-		margin-bottom: $spacing-small;
+		margin-top: $spacing-default;
+		margin-bottom: $spacing-default;
+	}
+
+	a,
+	p {
+		font-size: 16px;
+	}
+
+	.read-more {
+		margin-top: auto;
+		padding-bottom: $spacing-tiny;
+
+		border-bottom: 1px solid rgba($color-primary, 0);
+		text-decoration: none;
+		transition: 0.2s border-bottom ease;
+
+		@include active-states() {
+			border-bottom: 1px solid $color-primary;
+		}
 	}
 
 	p {
-		font-size: 14px;
 		color: $color-grey-light;
-	}
-
-	&__information {
-		padding: $spacing-default;
 	}
 
 	&__thumbnail {
