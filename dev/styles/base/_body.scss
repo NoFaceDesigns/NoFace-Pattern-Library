@@ -1,18 +1,18 @@
 /*///////////////
 /// BODY
-*///////////////
+*/ //////////////
 
 body {
-    font-family: 'Roboto', sans-serif;
+	font-family: $font-family-heading;
 
-    font-size: 1.6rem;
+	font-size: 1.6rem;
 
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    color: $color-black;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	color: $color-black;
 
-    @include bp-min-width($bp-tablet) {
-        font-size: 2rem;
-    }
+	@include bp-min-width($bp-tablet) {
+		font-size: 2rem;
+	}
 }

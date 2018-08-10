@@ -16,8 +16,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /// MAIN
 */ //////////////
 
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:400,700");
-
 @import "mixins/active-states.scss";
 @import "mixins/clearfix.scss";
 @import "mixins/media-queries.scss";
@@ -27,6 +25,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "reset/normalize.scss";
 
 @import "vars.scss";
+@import "fonts.scss";
 
 @import "base/anchor.scss";
 @import "base/article.scss";
