@@ -9,6 +9,16 @@ if (code) {
 	});
 }
 
+// VANILLA JS SOLUTION TO REMOVE ORPHANS - http://matmartin.co.uk/blog/code-prevent-widows-and-orphans-web-layouts/
+let p = document.querySelectorAll("p");
+if (p) {
+	p.forEach(function(e) {
+		let s = e.innerHTML;
+		s = s.replace(/ ([^ ]*)$/, "&nbsp;" + "$1");
+		e.innerHTML = s;
+	});
+}
+
 var article = document.querySelector("article");
 
 if (article) {
